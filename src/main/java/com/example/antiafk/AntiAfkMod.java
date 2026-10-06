@@ -17,9 +17,9 @@ public class AntiAfkMod implements ClientModInitializer {
         KeyMapping.Category category =
                 KeyMapping.Category.register(Identifier.fromNamespaceAndPath("antiafk", "main"));
 
-        settingsKey = KeyBindingHelper.registerKeyBinding(
+        settingsKey = KeyMappingHelper.registerKeyMapping(
                 new KeyMapping("key.antiafk.settings", InputConstants.Type.KEYSYM, InputConstants.KEY_Z, category));
-        toggleKey = KeyBindingHelper.registerKeyBinding(
+        toggleKey = KeyMappingHelper.registerKeyMapping(
                 new KeyMapping("key.antiafk.toggle", InputConstants.Type.KEYSYM, InputConstants.KEY_X, category));
 
         ClientTickEvents.END_CLIENT_TICK.register(client -> {
