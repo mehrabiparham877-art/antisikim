@@ -24,8 +24,8 @@ public class AntiAfkMod implements ClientModInitializer {
 
         ClientTickEvents.END_CLIENT_TICK.register(client -> {
             while (settingsKey.consumeClick()) {
-                if (client.screen == null) {
-                    client.setScreen(new AfkSettingsScreen());
+                if (client.gui.screen() == null) {
+                    client.gui.setScreen(new AfkSettingsScreen());
                 }
             }
             while (toggleKey.consumeClick()) {
