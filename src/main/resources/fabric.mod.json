@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "id": "antiafk",
+  "version": "${version}",
+  "name": "Smooth Anti-AFK",
+  "description": "Client-side anti-AFK: walks, sprints, jumps, crouches and smoothly moves the camera. Press Z for settings.",
+  "authors": ["you"],
+  "environment": "client",
+  "entrypoints": {
+    "client": ["com.example.antiafk.AntiAfkMod"]
+  },
+  "depends": {
+    "fabricloader": ">=0.19.1",
+    "minecraft": ">=26.2",
+    "java": ">=25",
+    "fabric-api": "*"
+  }
+}
