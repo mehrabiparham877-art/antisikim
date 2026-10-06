@@ -27,7 +27,7 @@ public final class AfkController {
         if (player == null) {
             return;
         }
-        if (!AfkConfig.enabled || mc.screen != null) {
+        if (!AfkConfig.enabled || mc.gui.screen() != null) {
             releaseKeys(mc);
             return;
         }
@@ -81,7 +81,7 @@ public final class AfkController {
         // --- HUD (action bar text) ---
         if (AfkConfig.showHud && ++hudTimer >= 10) {
             hudTimer = 0;
-            mc.gui.setOverlayMessage(Component.literal("Anti-AFK: ON  [Z = settings]"), false);
+            mc.gui.hud.setOverlayMessage(Component.literal("Anti-AFK: ON  [Z = settings]"), false);
         }
     }
 
